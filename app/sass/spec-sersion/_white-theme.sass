@@ -1,0 +1,385 @@
+@import "../vars"
+
+
+/* white */
+$white: #fff
+$black: #000
+
+$grey: #ccc
+$light-grey: #f0f0f0
+$dark-grey: #333
+
+
+html[data-theme="white"]
+	body
+		color: $black
+		background-color: $white
+	h2.inner-title
+		color: $black
+	a
+		color: $black
+		border-color: $black
+		&:hover
+			border-color: transparent
+	#wrapwrap
+		.top-line,
+		.head-content,
+		.main-sect,
+		.main-head,
+		.main-menu,
+		.navaslider,
+		.main-footer,
+		.foot-first-level,
+		.foot-second-level,
+		.wrap-bg-grey,
+		.page-sidebars
+			background-color: $white
+			&__sidebar,
+			&__content	
+				background-color: $white
+				box-shadow: 0 1px 0 0 $black, 0 0 0 1px $black
+		.sidebar
+			&-navigation
+				&__item
+					border-color: $grey
+				&__link
+					border-left: 3px solid transparent
+					&:hover, &:focus, &:active
+						border-bottom: none
+						background-color: $grey
+						color: $black
+					&--active
+						border-left-color: $black
+						background-color: $grey
+		.breadcrumbs
+			&__line
+				&-element
+					&::after
+						color: $black
+			&__link
+				color: $black
+				border-color: $black
+				&--home
+					&:hover, &:focus, &:active
+						.breadcrumbs__link--home-icon,
+						.breadcrumbs__link--home-text
+							color: $black
+						.breadcrumbs__link--home-text
+							border-color: $black
+					&-icon
+						color: $black
+					&-text
+						border-bottom: 1px solid $black
+						&:hover, &:focus, &:active
+							border-color: $black
+				&--disabled
+					color: $black
+					&:hover, &:focus, &:active
+						color: $black
+		.foot-first-level,
+		.top-line
+			height: auto
+		.foot-first-level,
+		.first-foot-line
+			border-bottom: 1px solid $black
+		.second-foot-line 
+			.col-md-6:nth-child(2)
+				border-right-color: $black
+		.dekstop-target-menu
+			height: auto
+			background: $white
+			box-shadow: none
+			border-top: 1px solid $black
+			border-bottom: 1px solid $black
+		.navaslider
+			margin-top: 0
+		.main-menu,
+		.main-footer
+			border-top: 1px solid $black
+		.main-menu
+			border-bottom: 1px solid $black
+		h2.inner-title, 
+		h2.inner-title--no-caps,
+		.title-border 
+			h2.inner-title
+			border-color: $black
+		.top-line
+			box-shadow: 0 1px 0 #000
+			.quick-links 
+				a
+					color: $black
+					border-color: $black
+			.spec-vers-wrap 
+				.btn-active-spec-ver
+					color: $black
+			.main-logo 
+				img
+					-webkit-filter: grayscale(100%)
+					-moz-filter: grayscale(100%)
+					-ms-filter: grayscale(100%)
+					-o-filter: grayscale(100%)
+					filter: grayscale(100%)
+			.res-links 
+				.droplist-main
+					&__btn
+						color: $black
+					&__sub-sub
+						&-title
+							color: $black
+						&-content 
+							a
+								color: $black
+			.flag-links 
+				.btn-ru
+					background-color: $grey
+				.dropdown-flags 
+				li
+					background-color: $grey
+		.dropdown-menu
+			li
+				border-color: $black
+				a
+					color: $black
+		.head-content 
+			.main-title
+				color: $black
+				text-shadow: none
+		.wrap-target-menu 
+			li
+				border-color: $black
+				a
+					color: $black
+		.wrap-inner-audit-menu
+			border-bottom: 1px solid $black
+		.main-sect 
+			border-bottom: 1px solid $black
+			&:last-child
+				border-bottom: none
+			h2
+				color: $black
+		.grey-sect
+			background-color: $white	
+		.blue-sect
+			color: $black
+		.news-sect
+			.wrap-target-other-news 
+				.target-other-news
+					border-color: $grey
+					background-color: $light-grey
+					span
+						color: $black
+		.wrap-cards-news 
+			.wrap-card-item-news
+				background-color: $grey
+			.wrap-news-content
+				color: $black
+				time
+					color: $black
+				.wrap-news-title h3:hover
+					border-color: $black
+		.common-news 
+			.date-public
+				color: $black
+				border-color: $black
+		
+		.rector-sect 
+			.wrap-rector-img
+				border-color: $grey
+		.comment-students-sect 
+			.wrap-comment-img
+				border-color: $grey
+			.comment-student-slider 
+				.owl-dots 
+					.owl-dot
+						background-color: $grey
+					.owl-dot.active
+						background-color: $dark-grey
+		.pa-sect,
+		.main-slider.owl-carousel
+			.owl-dots 
+				.owl-dot
+					background-color: $grey
+					border: none
+					box-shadow: none
+				.owl-dot.active
+					background-color: $dark-grey
+		.main-menu 
+			.wrap-main-menu 
+				.wrap-inner-common-menu
+					border-color: $black
+				ul
+					>li
+						&.droplist-open
+							a
+								background-color: $grey
+						a
+							color: $black
+							&:hover
+								background-color: $grey
+						.droplist-content
+							background-color: $grey
+							li
+								border-color: $black
+		.wrap-target-menu 
+			li 
+				a.head-content
+					color: $black
+		.other-link
+			color: $black
+			border-color: $black
+			a
+				color: $black
+				border-color: $black
+
+		.main-footer
+			color: $black
+			a
+				color: $black
+				border-color: $black
+			.wrap-foot-contancts 
+				.foot-social-list 
+					img
+						-webkit-filter: grayscale(100%)
+						-moz-filter: grayscale(100%)
+						-ms-filter: grayscale(100%)
+						-o-filter: grayscale(100%)
+						filter: grayscale(100%)
+				.foot-feedback 
+					.button-light-blue
+						background-color: $grey
+						color: $black
+						border-color: darken($grey, 10%)
+
+		
+			
+		.wrap-dis-page
+			.dis-meta-info
+				border-color: $black
+			.dis-docs 
+				ul
+					li
+						a
+							color: $black
+							border-color: $black
+
+		.wrap-events-list 
+			.wrap-events-date-filter
+				border-color: $black
+				ul 
+					li
+						&.active
+							a
+								color: $black
+								background-color: $grey
+						a
+							color: $black
+							&:hover
+								color: $black
+								background-color: $light-grey
+			.wrap-events-category 
+				li
+					border-color: $black
+					&.active
+						a
+							background-color: $light-grey
+					a
+						color: $black
+						background-color: $grey
+						&:hover
+							background-color: $light-grey
+			
+		.wrap-events-list	
+			.wrap-events-content 
+				.event-category
+					color: $black
+					border-color: $black
+				.table-events tbody .event-title a
+					color: $black
+					border-color: $black
+		.table > thead > tr > th, 
+		.table > tbody > tr > th, 
+		.table > tfoot > tr > th, 
+		.table > thead > tr > td, 
+		.table > tbody > tr > td, 
+		.table > tfoot > tr > td
+			border-color: $black
+		.table-striped > tbody > tr:nth-of-type(2n+1)
+			background-color: $light-grey
+		
+
+
+		#div_nav_panel 
+			#nav_panel 
+				li 
+					button
+						color: $black
+						background-color: $grey
+						border-color: $black
+						&.active, &:hover
+							background-color: $light-grey
+							color: $black
+		.wrap-standart-item
+			a
+				background-color: $grey
+			.wrap-icon i
+				color: $black
+			h3
+				color: $black
+		.pa-sect 
+			.wrap-pa-item 
+				strong
+					color: $black
+		.infographics-sect 
+			.wrap-infographics-content
+				color: $black
+
+		.event-item 
+			.wrap-date-event
+				border-color: $black
+				.event-month
+					color: $black
+			.event-content h3 a
+				color: $black
+				&:hover
+					border-color: $black
+			.calendar-icon
+				strong
+					color: $black
+				span
+					background-color: $dark-grey
+					box-shadow: 0 2px 0 $black
+				span::before,
+				span::after
+					border-color: $grey
+				
+		.tabs-container 
+			.nav-tabs
+				>li
+					&.active 
+						>a, >a:hover, >a:focus
+							background-color: $light-grey
+					>a
+						background-color: $grey
+						color: $black
+						&:hover, &:focus
+							background-color: $grey
+
+		.main-accordion 
+			.accordion-item 
+				.panel-title
+					background-color: $grey
+					color: $black
+					a, .fa
+						color: $black
+				.panel-body
+					background-color: $light-grey
+					border-color: $grey
+
+		.wrap-dis-page 
+			.dis-docs
+				background-color: $grey
+		
+		.search-area 
+			.search-area-form 
+				input
+					border-color: #999

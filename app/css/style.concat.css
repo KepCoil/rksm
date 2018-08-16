@@ -1,0 +1,61 @@
+html {
+  font-size: 100%; }
+
+body {
+  min-width: 320px;
+  height: auto;
+  position: relative;
+  overflow-x: hidden;
+  opacity: 1;
+  background-color: #fff;
+  color: #222;
+  font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.4;
+  letter-spacing: normal; }
+
+.navbar-main {
+  position: fixed;
+  width: 100%;
+  border: none;
+  background-color: blue;
+  z-index: 999;
+  height: 50px; }
+  .navbar-main .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0; }
+
+.main-content {
+  padding-top: 130px; }
+
+.page-main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  margin-top: 0; }
+
+.navbar {
+  height: 50px; }
+
+.logo {
+  height: 50px;
+  display: block; }
+  .logo img {
+    height: 50px;
+    display: block; }
+
+.shedule__row {
+  margin-bottom: 3rem; }
+  .shedule__row-title {
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    margin-bottom: 2rem; }
+
+.shedule__table {
+  font-size: 1.125rem; }
+  .shedule__table .table td:first-child {
+    width: 135px;
+    padding-right: 15px; }
+  .shedule__table .table > thead > tr > th, .shedule__table .table > tbody > tr > th, .shedule__table .table > tfoot > tr > th, .shedule__table .table > thead > tr > td, .shedule__table .table > tbody > tr > td, .shedule__table .table > tfoot > tr > td {
+    padding: 10px 0; }

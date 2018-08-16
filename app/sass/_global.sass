@@ -1,0 +1,866 @@
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+html, body
+	height: 100%
+
+html
+	font-size: 100%
+
+body
+	min-width: 320px
+	height: auto
+	position: relative
+	overflow-x: hidden
+	opacity: 1
+	background-color: #fff
+	color: $default-color
+	font-family: $default-font,  Helvetica, Arial, sans-serif
+	font-size: 0.9375rem
+	font-weight: normal
+	line-height: 1.4
+	letter-spacing: normal
+	
+
+/* odoo content tag wrap */
+#wrap
+	padding: 2rem 0 2.5rem 0
+.wrap-bg-grey
+	background-color: $grey-bgc
+
+ul
+	list-style: square outside
+
+ul.ul-accent
+	list-style-type: none
+	margin: 0.625rem 0
+	li
+		margin-bottom: 0.35rem
+		&::before
+			content: ''
+			display: inline-block
+			width: 7px
+			height: 7px
+			top: 7px
+			background-color: $blue
+			position: relative
+			float: left
+			margin-left: -1.5rem
+			margin-right: -0.4375rem
+			overflow: hidden
+			line-height: inherit
+			text-align: left
+			vertical-align: top
+
+ul.ul-docs
+	list-style-type: none
+	margin: 0.625rem 0
+	li
+		margin-bottom: 0.625rem
+		&::before
+			font-family: FontAwesome
+			content: "\f15c"
+			display: inline-block
+			color: $blue
+			top: 0
+			font-size: 1.125rem
+			position: relative
+			float: left
+			margin-left: -1.5rem
+			margin-right: -0.5rem
+			overflow: hidden
+			line-height: inherit
+			text-align: left
+
+p
+	margin: 0 0 0.625rem 0
+@media only screen and (max-width : 991px)
+	p[align=justify]
+		text-align: left
+		
+a
+	text-decoration: none
+	outline: none !important
+	transition: color $main-trans, border-bottom-color $main-trans, background-color $main-trans
+	color: #084dd8
+	border-width: 1px
+	border-bottom-style: solid
+	border-color: #084dd8
+	&:hover, &:active, &:focus
+		text-decoration: none
+		color: $accent-links
+		border-bottom: 1px solid $accent-links
+
+button
+	outline: none !important
+
+
+.standart-button
+	text-decoration: none
+	display: inline-block
+	padding: 10px 20px
+	color: #fff
+	background-color: #4f8fcd
+	border: 2px solid lighten(#4f8fcd, 5%)
+	border-radius: 2px
+	font-family: "OpenSans-Semibold"
+	transition: background-color $main-trans, border-color $main-trans, color $main-trans 
+	&:hover, &:focus, &:active
+		background-color: $accent-links
+		border-color: $accent-links
+		color: #fff
+
+h1, .h1, .main-title
+	font-size: 30px
+	line-height: 1.3
+	font-family: "MyriadPro-SemiBold"
+	font-weight: normal
+	text-transform: uppercase
+	font-weight: normal
+h2, .h2
+	font-size: 1.75rem
+	line-height: 1.3
+	font-family: "MyriadPro-SemiBold"
+	font-weight: normal
+	text-align: left
+	margin-top: 1rem
+	margin-bottom: 1.25rem
+h3, .h3
+	font-size: 1.5rem
+	line-height: 1.3
+	font-family: "MyriadPro-SemiBold"
+	font-weight: normal
+	margin-top: 1rem
+	margin-bottom: 1.25rem
+h4, .h4
+	font-size: 1.25rem
+	line-height: 1.3
+	font-family: "MyriadPro-SemiBold"
+	font-weight: normal
+	margin-top: 1rem
+	margin-bottom: 1.25rem
+h5, .h5
+	font-size: 1.125rem
+	line-height: 1.2
+	font-family: "MyriadPro-SemiBold"
+	font-weight: normal
+	margin-top: 0.5rem
+	margin-bottom: 0.625rem
+h6, .h6
+	font-size: 1rem
+	line-height: 1.2
+	font-family: "MyriadPro-SemiBold"
+	font-weight: normal
+	margin-top: 0.5rem
+	margin-bottom: 0.625rem
+
+h2.inner-title, 
+h2.inner-title--no-caps
+	font-size: 1.75rem
+	font-family: "OpenSans-Semibold"
+	color: $blue
+	margin: 0 0 1.625rem 0
+	text-align: left
+
+h2.inner-title
+	text-transform: uppercase
+
+h2.inner-title--no-caps
+	font-size: 1.5rem
+
+i.fa
+	letter-spacing: normal
+
+.title-border
+	border-bottom: 1px solid $light-grey-font
+	margin-bottom: 1.5rem
+	h2.inner-title
+		display: inline-block
+		position: relative
+		border-bottom: 2px solid $blue
+		bottom: -1px
+		margin-bottom: 0
+		padding-bottom: 0.5rem
+		font-size: 1.5rem
+
+.page-sidebars
+	&__page-sidebars__colums
+		// 
+	&__sidebar,
+	&__content
+		background-color: #fff
+		border-radius: 3px
+		box-shadow: 0 2px 0 0 $light-grey-line, 0 0 0 1px $light-grey-line
+	&__content
+		padding: 2rem 1.75rem
+	&__sidebar
+		
+
+.sidebar
+	&-navigation
+		padding: 0.625rem 0
+		&__list
+			display: block
+			list-style-type: none
+			padding: 0
+			margin: 0
+		&__item
+			// margin: 0 0 1px 0
+			border-bottom: 1px solid $light-grey-line
+			&:last-child
+				// margin-bottom: 0
+				border-bottom: 0
+		&__link
+			display: block
+			padding: 0.75rem 1rem
+			border-left: 3px solid transparent
+			border-bottom: none
+			color: #000
+			font-size: 1rem
+			line-height: 1.2
+			&:hover, &:focus, &:active
+				border-bottom: none
+				background-color: $purple-bgc
+				color: #000
+			&--active
+				border-left-color: $blue
+				font-family: "OpenSans-Semibold"
+				background-color: $purple-bgc
+
+.inner-wrapper-sticky 
+	left: auto !important
+
+.breadcrumbs
+	margin-bottom: 1.25rem
+	&__line
+		list-style-type: none
+		margin: 0
+		padding: 0
+		&-element
+			float: left
+			margin-bottom: 0.75rem
+			margin-right: 0.625rem
+			&::after
+				display: inline-block
+				font-family: FontAwesome
+				content: "\f105"
+				color: $grey-font
+				margin-left: 0.525rem
+			&:last-child
+				&::after
+					display: none
+	&__link
+		color: $grey-font
+		border-color: $grey-font
+		font-size: 0.875rem
+		&--home
+			border: none
+			&:hover, &:focus, &:active
+				border: none
+				.breadcrumbs__link--home-icon,
+				.breadcrumbs__link--home-text
+					color: $accent-links
+				.breadcrumbs__link--home-text
+					border-color: $accent-links
+			&-icon
+				display: inline-block
+				color: $grey-font
+				margin-right: 0.2rem
+				transition: color $main-trans
+			&-text
+				display: inline-block
+				border-bottom: 1px solid $grey-font
+				transition: color $main-trans, border-color $main-trans
+				&:hover, &:focus, &:active
+					border-color: $accent-links
+		&--disabled
+			border: none
+			cursor: default
+			&:hover, &:focus, &:active
+				color: $grey-font
+				border: none	
+
+#wrapwrap 
+	table.table, 
+	.o_editable table.table
+		table-layout: auto
+
+
+/* иконки для ссылок на файлы */
+.doc-file
+	border: none
+	text-decoration: underline
+	margin-right: 0.4rem
+	letter-spacing: normal
+	&:hover, &:focus, &:active
+		border: none
+		text-decoration: underline
+	&::before
+		display: inline-block
+		position: relative
+		width: 2.2rem
+		padding: 2px 0
+		text-transform: uppercase
+		font-family: "OpenSansCondensed-Bold"
+		font-style: normal
+		font-size: 0.875rem
+		text-align: center
+		margin-right: 0.4rem
+		border-radius: 1px
+		color: #fff
+	&--pdf
+		&::before
+			content: "pdf"
+			background-color: #cb0606
+	&--doc
+		&::before
+			content: "doc"
+			background-color: #2a5699
+	&--xlsx
+		&::before
+			content: "xlsx"
+			background-color: #1f6a41
+	&--pptx
+		&::before
+			content: "xlsx"
+			background-color: #d14424
+
+/* иконки для ссылок на файлы */
+
+/* Пагинация Odoo */
+#div_nav_panel
+	padding: 0
+	margin: 15px 0 0 0
+	ul#nav_panel
+		margin: 0
+		padding: 0
+		text-align: center
+		li
+			display: inline-block
+			.btn
+				display: block
+				width: 2.75rem
+				height: 2.75rem
+				border: 1px solid $dark-line
+				font-family: "OpenSans-Regular"
+				padding: 0
+				font-size: 1.125rem
+				margin: 3px
+				transition: background-color $main-trans, color $main-trans
+				cursor: pointer
+				border-radius: 3px
+				&:hover
+					background-color: $grey-bgc
+					color: $accent-links
+				&.active
+					background-color: $blue
+					color: #fff
+					cursor: default
+				&.disabled, &[disabled]
+					cursor: default
+					color: $default-color
+					background-color: transparent
+
+
+/*  */		
+
+/* Секции главной страницы */
+.main-sect
+	padding: 3.125rem 0
+	h2
+		text-transform: uppercase
+		font-size: 2rem
+		color: $dark-blue
+		font-family: "OpenSans-Regular"
+		font-weight: normal
+		margin: 0 0 2.5rem 0
+.white-sect
+	background-color: #fff
+.light-sect
+	background-color: $light-bgc
+.grey-sect
+	background-color: $grey-bgc
+.blue-sect
+	background-color: $blue
+	color: #fff
+	h2
+		color: #fff
+/* Конец Секции главной страницы */
+
+
+.other-link
+	display: inline-block
+	margin-top: 1.875rem
+	font-size: 1.25rem
+	color: $dark-blue
+	font-family: "OpenSans-Regular"
+	.fa
+		transition: color $main-trans
+	a
+		color: $dark-blue
+		border-color: $dark-blue
+		&:hover
+			color: $accent-links
+			border-color: $accent-links
+			& + .fa
+				color: $accent-links
+
+.wrap-other-link
+	display: block
+	font-size: 1rem
+	padding: 0 15px 30px 15px
+	&:hover
+		.other-link
+			color: $accent-links
+			border-color: $accent-links
+	.other-link
+		margin: 0
+		transition: color $main-trans, border-color $main-trans
+		border-bottom: 1px solid $dark-blue
+		font-size: 1rem
+
+/* MOBILE MMENU MENU */
+#js-mobile-mmenu
+	z-index: 5000
+	box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.2)
+	background-color: $grey-bgc
+	a
+		border-bottom: none
+	i.fa
+		display: none
+	.mm-navbars-bottom
+		padding: 0 5px
+		.mob-qlinks
+			font-size: 25px
+			span
+				display: block
+				font-size: 9px
+				margin-top: 8px
+				font-family: "MyriadPro-Semibold"
+
+/* КОНЕЦ MOBILE MMENU MENU */
+
+
+#wrapwrap
+	.dropdown-menu
+		margin-bottom: 0
+		background-color: #f7f7f7
+		padding: 0 0 0.5rem 0
+		border-radius: 0
+		border: none
+		box-shadow: none
+		li
+			background-color: #f7f7f7
+			border-bottom: 1px solid #ddd
+			&:first-child
+				border-bottom: 1px solid #ddd
+			&:last-child
+				border-bottom: none
+			a
+				color: $blue
+				text-transform: none
+				padding: 8px 12px 8px 8px
+				font-family: "OpenSans-Regular"
+				border: none
+				transition: all $main-trans
+				display: block
+				background-color: transparent !important
+				white-space: normal
+				&:hover
+					color: $accent-links
+					border: none
+			
+
+
+
+.wrap-info-resources.mm-menu.mm-offcanvas
+	z-index: 999
+
+
+/* Standard items */
+.wrap-standart-item
+	text-align: center
+	margin-bottom: 30px
+	overflow: hidden
+	span
+		display: block
+	a
+		display: block
+		color: #fff
+		border: none
+		padding: 10% 5%
+		background-color: $purple-bgc
+		overflow: hidden
+		&:hover
+			.wrap-icon
+				.fa, .icis, .icis::before
+					transform: scale(1.1)
+	.wrap-icon
+		.fa, .icis, .icis::before
+			font-size: 75px
+			color: lighten($blue, 5%)
+			transition: transform $main-trans
+	.standart-item-content
+		h3
+			font-size: 1.25rem
+			margin: 1.5rem 0 1rem 0
+			color: $default-color
+			line-height: 1
+			transition: color $main-trans
+		p
+			font-size: 0.875rem
+			margin-bottom: 0
+			color: #333
+
+.item-no-work
+	a
+		cursor: no-drop
+		color: #666
+		border: none
+		background-color: $grey-bgc
+		&:hover
+			i
+				transform: none
+	h3
+		color: #666
+	.wrap-icon
+		i
+			color: #666
+/* END template standard page items */
+
+
+/* Фиксация внутр. меню при прокрутке */
+.fixed-inner-menu
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 5000
+/* Фиксация внутр. меню при прокрутке */
+
+
+
+/* Tabs content */
+.tabs-container
+	.nav-tabs 
+		border: none
+		margin-bottom: 1.5625rem
+		>li
+			>a
+				border-radius: 0
+				font-family: "OpenSans-Semibold"
+				font-size: 1rem
+				border: 0
+				padding: 0.625rem 1rem
+				background-color: $light-grey-font
+				margin-right: 5px
+				margin-bottom: 5px
+				color: lighten($default-color, 10%)
+				&:hover, &:focus
+					color: $accent-links
+					background-color: $light-grey-font
+		&--min-size
+			>li
+				>a
+					padding: 8px 12px
+		>li.active >a, 
+		>li.active >a:hover, 
+		>li.active >a:focus
+			background-color: $blue
+			color: #fff
+			border: 0
+
+
+
+/* Accordion (bootstrap) */
+.main-accordion
+	.accordion-item
+		margin: 1rem 0
+		border: none
+		box-shadow: none
+		.panel-heading
+			padding: 0
+			border: none
+		.panel-body
+			background-color: #fefefe
+			border: 1px solid #ddd
+			padding: 0
+			&-padding
+				padding: 0.875rem
+		.panel-title
+			margin: 0
+			padding: 0.875rem 1.25rem
+			background-color: $grey-bgc
+			border: none
+			font-family: "OpenSans-SemiBold"
+			font-size: 1rem
+			&:hover
+				.fa, a
+					color: $accent-links
+			.fa
+				font-size: 1.1rem
+				margin-right: 0.3125rem
+				transform: rotate(0)
+				transition: color $main-trans, transform $main-trans
+			a
+				border: none
+				color: $default-color
+		.panel-heading.active
+			.panel-title
+				.fa
+					transform: rotate(90deg)
+				
+/* End accordion */
+
+
+/* Scroll Top Button */	
+.button-top-scroll
+	position: fixed
+	z-index: 3
+	width: 3.25rem
+	height: 3.25rem
+	bottom: 2rem
+	right: -100px
+	background-color: $light-grey-font
+	border-radius: 50%
+	opacity: 0.9
+	text-align: center
+	cursor: pointer
+	-webkit-transition: all $main-trans
+	transition: all $main-trans
+	box-shadow: 1px 1px 3px rgba(0,0,0,.5)
+
+	&--active
+		right: 1.5rem
+	&:hover
+		opacity: 1
+		.button-top-scroll__icon
+			transform: translateY(-70%)
+	&__icon
+		position: relative
+		top: 50%
+		transform: translateY(-50%)
+		font-size: 1.5rem
+		color: darken($light-grey-font, 45%)
+		transition: all .15s ease-out
+
+.personal-info
+	position: relative
+	margin-bottom: 1.5rem
+	&__left
+		display: inline-block
+		position: relative
+		vertical-align: top
+	&__right
+		width: calc(100% - 10rem)
+		display: inline-block
+		vertical-align: top
+		margin-top: 0.5rem
+
+	&__photo
+		&-wrap
+			display: inline-block
+			position: relative
+			width: 8.5rem
+			height: auto
+			margin-right: 1rem
+			border: 0.1875rem solid $dark-line
+			vertical-align: top
+			overflow: hidden
+			border-radius: 2px
+		&-img
+			width: 100%
+			visibility: visible !important
+
+	&__item
+		margin-bottom: 0.25rem
+		&--name
+			margin-bottom: 0
+			font-family: "OpenSans-SemiBold"
+			font-size: 1rem
+		&--job
+			margin-bottom: 0.5rem
+			font-size: 1rem
+		&-icon
+			margin-right: 0.4rem
+			width: 1rem
+		&-link
+			border: none
+			color: $default-color
+			&:hover, &:focus, &:active
+				border: none
+
+/* ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ */
+.special-version
+	position: fixed
+	right: -397px
+	top: 105px
+	z-index: 999
+	font-size: 18px
+	color: #000
+	transition: right $main-trans, opacity $main-trans
+	letter-spacing: normal !important
+	&--active
+		right: 0
+	&:hover
+		opacity: 1
+	&__button
+		padding: 0
+		border: none
+		background-color: transparent
+		line-height: 1
+	&__button-toggle-wrap
+		display: inline-block
+		vertical-align: top
+		position: relative
+		right: -5px
+		top: -1px
+		border-top: 1px solid #c9c9c9
+		border-bottom: 1px solid #c9c9c9
+		border-left: 1px solid #c9c9c9
+	&__button-toggle
+		border: none
+		padding: 15px
+		background-color: #e3e3e3
+		&:hover
+			.special-version__button-toggle-icon
+				transform: rotate(45deg)
+	&__button-toggle-icon
+		font-size: 45px
+		transition: transform $main-trans
+	&__content
+		display: inline-block
+		padding: 15px 15px
+		width: 395px
+		vertical-align: top
+		background-color: #e3e3e3
+		box-shadow: 0 2px 0 0 #c9c9c9, 0 0 0 1px #c9c9c9
+		&-item
+			margin-bottom: 25px
+			&:last-child
+				margin-bottom: 0
+	&__title
+		display: inline-block
+		position: relative
+		width: 150px
+		vertical-align: top
+		font-family: "MyriadPro-SemiBold"
+	&__settings
+		width: calc(100% - 160px)
+		display: inline-block
+	&__list
+		width: 210px
+		margin: 0
+		padding: 0
+		list-style-type: none
+		&-item
+			&:last-child
+				.special-version__button
+					margin-bottom: 0
+	&__button
+		display: inline-block
+		margin-bottom: 10px
+		font-size: 16px
+		border: none
+		font-family: "MyriadPro-SemiBold"
+	&__font
+		margin-bottom: 15px
+		color: #000
+		&:hover
+			border: none
+			color: #000
+		&--small
+			font-size: 15px
+		&--medium
+			font-size: 20px
+		&--large
+			font-size: 25px
+	&__theme
+		display: inline-block
+		padding: 8px 10px
+		margin-bottom: 8px
+		&:hover
+			border: none
+			color: #000
+		&--white
+			background-color: #fff
+			color: #000
+			&:hover
+				color: #000
+		&--black
+			background-color: #000
+			color: #fff
+			&:hover
+				color: #fff
+		&--blue
+			background-color: #9dd1ff
+			color: #063462
+			&:hover
+				color: #063462
+	&__letter-spacing
+		margin-bottom: 10px
+		font-size: 18px
+		&--default
+			letter-spacing: normal
+		&--medium
+			letter-spacing: 2px
+		&--large
+			letter-spacing: 5px
+	&__button-off-wrap
+		text-align: center
+	&__button-off
+		font-size: 15px
+		font-family: "MyriadPro-SemiBold"
+		padding: 5px 15px
+		line-height: 1
+
+
+// Переключатель видимости изображений
+.wrap-toggle-img
+	position: relative
+	.switch-state-img:empty
+		visibility: hidden
+	.switch-state-img:empty ~ label
+		position: relative
+		cursor: pointer
+		user-select: none
+		line-height: 1.75
+		left: -21px
+		font-weight: normal
+	.switch-state-img:empty ~ label::before,
+	.switch-state-img:empty ~ label::after
+		content: ''
+		position: absolute
+		display: block
+		top: 0
+		bottom: 0
+		width: 76px
+		transition: all 100ms ease-in
+		background-color: #ff0000
+		font-size: 14px
+		border-radius: 2px
+		font-family: "MyriadPro-SemiBold"
+		line-height: 2
+		text-align: center
+	.switch-state-img:empty ~ label::after
+		content: 'ВЫКЛ'
+		width: 40px
+		top: 2px
+		bottom: 2px
+		margin-left: 2px
+		background-color: #fff
+	.switch-state-img:checked ~ label::before
+		background-color: #008000
+	.switch-state-img:checked ~ label::after
+		content: 'ВКЛ'
+		margin-left: 34px
+
+/* КОНЕЦ ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ */
