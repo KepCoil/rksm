@@ -15,11 +15,94 @@ body {
   line-height: 1.4;
   letter-spacing: normal; }
 
+.home-page {
+  background-image: url("../img/bg_top.jpg");
+  min-height: 100vh;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: top center;
+  overflow: hidden; }
+
+#navbar-home {
+  margin-top: 2rem;
+  position: static; }
+
+.home-main-content {
+  padding: 10% 0 6%; }
+  .home-main-content h1 {
+    font-weight: 300; }
+
+.home-footer {
+  position: absolute;
+  bottom: 5rem;
+  width: 100%; }
+
+.gallery-albums {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee; }
+  .gallery-albums:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none; }
+  .gallery-albums__date {
+    margin-bottom: 1rem;
+    color: #777; }
+  .gallery-albums__row {
+    margin-left: -5px;
+    margin-right: -5px; }
+  .gallery-albums__img-all-link {
+    display: block;
+    background-color: #eee;
+    height: 100%; }
+  .gallery-albums__img-all-content {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+
+.gallery__row {
+  margin-left: -5px;
+  margin-right: -5px; }
+
+.gallery__col {
+  padding: 5px;
+  margin-bottom: 0;
+  height: 175px;
+  overflow: hidden; }
+
+.gallery__item {
+  display: block;
+  border: none;
+  overflow: hidden;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.gallery__img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle; }
+
+.sl-overlay {
+  opacity: .97; }
+
+.home-list {
+  list-style-type: none;
+  margin: 2rem 0; }
+
+.btn-wrap button {
+  padding: 10px 25px; }
+
 .navbar-main {
   position: fixed;
   width: 100%;
   border: none;
-  background-color: blue;
   z-index: 999;
   height: 50px; }
   .navbar-main .navbar-collapse {
@@ -57,5 +140,9 @@ body {
   .shedule__table .table td:first-child {
     width: 135px;
     padding-right: 15px; }
+  .shedule__table .table tr {
+    position: relative; }
+    .shedule__table .table tr:hover {
+      color: red; }
   .shedule__table .table > thead > tr > th, .shedule__table .table > tbody > tr > th, .shedule__table .table > tfoot > tr > th, .shedule__table .table > thead > tr > td, .shedule__table .table > tbody > tr > td, .shedule__table .table > tfoot > tr > td {
     padding: 10px 0; }

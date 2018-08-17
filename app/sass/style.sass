@@ -15,11 +15,102 @@ body
 	line-height: 1.4
 	letter-spacing: normal
 
+.home-page
+	background-image: url("../img/bg_top.jpg")
+	min-height: 100vh
+	background-size: cover
+	background-position: top center
+	overflow: hidden
+
+#navbar-home
+	margin-top: 2rem
+	position: static
+.home-main-content
+	padding: 10% 0 6%
+	h1
+		font-weight: 300
+.home-footer
+	position: absolute
+	bottom: 5rem
+	width: 100%
+// .video-bgc
+// 	background: #000
+// 	position: fixed
+// 	top: 0
+// 	right: 0
+// 	bottom: 0
+// 	left: 0
+// 	z-index: -99
+
+// .video-foreground,
+// .video-bgc iframe 
+// 	position: absolute
+// 	top: 0
+// 	left: 0
+// 	width: 100%
+// 	height: 100%
+// 	pointer-events: none
+
+.gallery-albums
+	margin-bottom: 3rem
+	padding-bottom: 2rem
+	border-bottom: 1px solid #eee
+	&:last-child
+		margin-bottom: 0
+		padding-bottom: 0
+		border-bottom: none
+	&__date
+		margin-bottom: 1rem
+		color: #777
+	&__row
+		margin-left: -5px
+		margin-right: -5px
+	&__img-all-link
+		display: block
+		background-color: #eee
+		height: 100%
+	&__img-all-content
+		text-align: center
+		position: relative
+		top: 50%
+		transform: translateY(-50%)
+
+
+.gallery
+	&__row
+		margin-left: -5px
+		margin-right: -5px
+	&__col
+		padding: 5px
+		margin-bottom: 0
+		height: 175px
+		overflow: hidden
+	&__item
+		display: block
+		border: none
+		overflow: hidden
+		height: 100%
+		text-align: center
+		background-color: rgba(0, 0, 0, 0.1)
+	&__img
+		display: inline-block
+		max-width: 100%
+		height: auto
+		object-fit: cover
+		vertical-align: middle
+
+.sl-overlay
+	opacity: .97
+.home-list
+	list-style-type: none
+	margin: 2rem 0
+.btn-wrap
+	button
+		padding: 10px 25px
 .navbar-main
 	position: fixed
 	width: 100%
 	border: none
-	background-color: blue
 	z-index: 999
 	height: 50px
 	.navbar-collapse
@@ -52,8 +143,13 @@ body
 	&__table
 		font-size: 1.125rem
 		.table
-			td:first-child
-				width: 135px
-				padding-right: 15px
+			td
+				&:first-child
+					width: 135px
+					padding-right: 15px
+			tr
+				position: relative
+				&:hover
+					color: red
 		.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td
 			padding: 10px 0

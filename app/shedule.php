@@ -42,6 +42,8 @@
 						</div>
 					</div>
 
+					
+
 					<div class="shedule__row">
 						<h3 class="shedule__row-title">День 2-ой, 25 сентября (вторник)</h3>
 						<div class="shedule__table">
