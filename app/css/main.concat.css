@@ -37,10 +37,34 @@ body {
   bottom: 5rem;
   width: 100%; }
 
+.tabs-container .nav-tabs {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1.5rem; }
+
+.tabs-container .nav-tabs > li {
+  margin-right: 2rem;
+  margin-bottom: -1px; }
+
+.tabs-container .nav-tabs > li > a {
+  border: none;
+  padding: 0 0 5px 0;
+  margin-right: 0;
+  background-color: none;
+  font-size: 1.125rem; }
+
+.tabs-container .nav-tabs > li > a:hover, .tabs-container .nav-tabs > li > a:focus {
+  background-color: none; }
+
+.tabs-container .nav-tabs > li.active > a, .tabs-container .nav-tabs > li.active > a:hover, .tabs-container .nav-tabs > li.active > a:focus {
+  border: none;
+  color: red;
+  background-color: none;
+  border-bottom: 1px solid red; }
+
 .gallery-albums {
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #eee; }
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd; }
   .gallery-albums:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
@@ -51,6 +75,22 @@ body {
   .gallery-albums__row {
     margin-left: -5px;
     margin-right: -5px; }
+  .gallery-albums__col {
+    padding: 5px;
+    margin-bottom: 0;
+    height: 130px;
+    overflow: hidden; }
+  .gallery-albums__img-wrap {
+    overflow: hidden;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); }
+  .gallery-albums__img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    vertical-align: middle; }
   .gallery-albums__img-all-link {
     display: block;
     background-color: #eee;
@@ -110,23 +150,14 @@ body {
     padding-right: 0; }
 
 .main-content {
-  padding-top: 130px; }
+  padding-top: 130px;
+  margin-bottom: 5rem; }
 
 .page-main-title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 3rem;
   margin-top: 0; }
-
-.navbar {
-  height: 50px; }
-
-.logo {
-  height: 50px;
-  display: block; }
-  .logo img {
-    height: 50px;
-    display: block; }
 
 .shedule__row {
   margin-bottom: 3rem; }
@@ -146,3 +177,17 @@ body {
       color: red; }
   .shedule__table .table > thead > tr > th, .shedule__table .table > tbody > tr > th, .shedule__table .table > tfoot > tr > th, .shedule__table .table > thead > tr > td, .shedule__table .table > tbody > tr > td, .shedule__table .table > tfoot > tr > td {
     padding: 10px 0; }
+
+.main-foot {
+  background-color: #2e343f;
+  padding: 1rem 0 2rem 0;
+  color: #ddd; }
+  .main-foot a {
+    color: #ddd; }
+    .main-foot a:hover {
+      text-decoration: underline;
+      color: #fff; }
+
+.footer-content__list {
+  padding-left: 0;
+  list-style-type: none; }

@@ -7,27 +7,32 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<div class="logo">
+			<!-- <div class="logo">
 				<a href="#">
 					<img class="img-responsive" src="img/logo_roscosmos_n.png" alt="">
 				</a>
-			</div>
+			</div> -->
 		</div>
 
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-
-
-			</ul>
-
-			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="#">Программа</a></li>
-				<li><a href="#">Участники</a></li>
 				<li><a href="#">Новости</a></li>
+				<li><a href="#">Участники</a></li>
+				<li><a href="#">Программа</a></li>
+				<li><a href="#">Трансферы</a></li>
 				<li><a href="#">Галлерея</a></li>
 				<li><a href="#">Партнеры</a></li>
 				<li><a href="#">Пресс-центр</a></li>
 				<li><a href="#">Контакты</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="#">
+						<i class="fa fa-user-plus" aria-hidden="true"></i>
+						Регистрация
+					</a>
+				</li>
+
 			</ul>
 		</div>
 

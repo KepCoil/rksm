@@ -1,7 +1,8 @@
+
 html 
 	font-size: 100%
+
 body
-	
 	min-width: 320px
 	height: auto
 	position: relative
@@ -51,10 +52,31 @@ body
 // 	height: 100%
 // 	pointer-events: none
 
+.tabs-container
+	.nav-tabs
+		border-bottom: 1px solid #ddd
+		margin-bottom: 1.5rem
+	.nav-tabs > li
+		margin-right: 2rem
+		margin-bottom: -1px
+	.nav-tabs > li > a
+		border: none
+		padding: 0 0 5px 0
+		margin-right: 0
+		background-color: none
+		font-size: 1.125rem
+	.nav-tabs > li > a:hover, .nav-tabs > li > a:focus
+		background-color: none
+	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus
+		border: none
+		color: red
+		background-color: none
+		border-bottom: 1px solid red
+
 .gallery-albums
-	margin-bottom: 3rem
-	padding-bottom: 2rem
-	border-bottom: 1px solid #eee
+	margin-bottom: 2rem
+	padding-bottom: 1rem
+	border-bottom: 1px solid #ddd
 	&:last-child
 		margin-bottom: 0
 		padding-bottom: 0
@@ -65,6 +87,21 @@ body
 	&__row
 		margin-left: -5px
 		margin-right: -5px
+	&__col
+		padding: 5px
+		margin-bottom: 0
+		height: 130px
+		overflow: hidden
+	&__img-wrap
+		overflow: hidden
+		height: 100%
+		background-color: rgba(0, 0, 0, 0.1)
+	&__img
+		display: inline-block
+		max-width: 100%
+		height: auto
+		object-fit: cover
+		vertical-align: middle
 	&__img-all-link
 		display: block
 		background-color: #eee
@@ -119,20 +156,27 @@ body
 
 .main-content
 	padding-top: 130px
+	margin-bottom: 5rem
 .page-main-title
 	font-size: 2.5rem
 	font-weight: 700
 	margin-bottom: 3rem
 	margin-top: 0
 
-.navbar
-	height: 50px
-.logo
-	height: 50px
-	display: block
-	img
-		height: 50px
-		display: block
+// .navbar-main
+// 	height: 50px
+// 	.navbar-nav
+// 		float: none
+// 		text-align: center
+// 		>li
+// 			float: none
+// 			display: inline-block
+// .logo
+// 	height: 50px
+// 	display: block
+// 	img
+// 		height: 50px
+// 		display: block
 .shedule
 	&__row
 		margin-bottom: 3rem
@@ -153,3 +197,18 @@ body
 					color: red
 		.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td
 			padding: 10px 0
+
+.main-foot
+	background-color: #2e343f
+	padding: 1rem 0 2rem 0
+	color: #ddd
+	a
+		color: #ddd
+		&:hover
+			text-decoration: underline
+			color: #fff
+
+.footer-content
+	&__list
+		padding-left: 0
+		list-style-type: none
