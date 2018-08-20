@@ -1,5 +1,6 @@
+@import "vars"
 
-html 
+html
 	font-size: 100%
 
 body
@@ -9,7 +10,7 @@ body
 	overflow-x: hidden
 	opacity: 1
 	background-color: #fff
-	color: #222
+	color: $default-color
 	font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif
 	font-size: 1rem
 	font-weight: normal
@@ -35,7 +36,7 @@ body
 	bottom: 5rem
 	width: 100%
 // .video-bgc
-// 	background: #000
+// 	background: $default-color
 // 	position: fixed
 // 	top: 0
 // 	right: 0
@@ -51,6 +52,77 @@ body
 // 	width: 100%
 // 	height: 100%
 // 	pointer-events: none
+
+.page-list-news
+	&__item
+		display: block
+		margin-bottom: 2rem
+	&__link
+		display: block
+		color: $default-color
+		border-bottom: 1px solid #ddd
+		padding-bottom: 1.5rem
+		transition: border-bottom-color .3s ease-out
+		&:hover, &:focus
+			color: $default-color
+			text-decoration: none
+			border-bottom-color: $accent-color
+	&__content
+		&-img
+			width: 100%
+			height: auto
+			padding: 30%
+			background-size: cover
+			background-position: top center
+		&-title
+			font-weight: 700
+		&-date
+			display: block
+			color: #555
+			margin-bottom: 1rem
+
+.page-news
+	&__content
+		margin-bottom: 3rem
+	&__date
+		display: block
+		margin-bottom: 1.5rem
+		color: $grey-font
+
+#div_nav_panel
+	padding: 0
+	ul#nav_panel
+		margin: 0
+		padding: 0
+		text-align: center
+		list-style-type: none
+		li
+			display: inline-block
+			.btn
+				display: block
+				border: none
+				padding: 0
+				margin: 3px
+				// transition: background-color $main-trans, color $main-trans
+				cursor: pointer
+				border-radius: 3px
+				background-color: transparent
+				box-shadow: none
+				font-size: 1.25rem
+				background-image: none
+				padding: 5px 10px
+				&:hover
+					// background-color: $grey-bgc
+					// color: $accent-links
+					color: $accent-color
+				&.active
+					cursor: default
+					color: $accent-color
+				&.disabled, &[disabled]
+					cursor: default
+					background-color: transparent
+					&:hover
+						color: $default-color
 
 .tabs-container
 	.nav-tabs
@@ -69,9 +141,9 @@ body
 		background-color: none
 	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus
 		border: none
-		color: red
+		color: $accent-color
 		background-color: none
-		border-bottom: 1px solid red
+		border-bottom: 1px solid $accent-color
 
 .gallery-albums
 	margin-bottom: 2rem
@@ -83,7 +155,7 @@ body
 		border-bottom: none
 	&__date
 		margin-bottom: 1rem
-		color: #777
+		color: $grey-font
 	&__row
 		margin-left: -5px
 		margin-right: -5px
@@ -104,7 +176,7 @@ body
 		vertical-align: middle
 	&__img-all-link
 		display: block
-		background-color: #eee
+		background-color: $grey-bgc
 		height: 100%
 	&__img-all-content
 		text-align: center
@@ -154,8 +226,20 @@ body
 		padding-left: 0
 		padding-right: 0
 
+#navbar-inner
+	background-image: none
+	background-color: $dark-bgc-color
+	border-radius: 0
+	height: auto
+	line-height: auto
+	.navbar-nav > li > a
+		text-shadow: none
+		color: $dark-bgc-font-color
+	.navbar-nav > li > a:hover, .navbar-nav > li > a:focus
+		color: #fff
+
 .main-content
-	padding-top: 130px
+	padding-top: 120px
 	margin-bottom: 5rem
 .page-main-title
 	font-size: 2.5rem
@@ -194,16 +278,16 @@ body
 			tr
 				position: relative
 				&:hover
-					color: red
+					color: $accent-color
 		.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td
 			padding: 10px 0
 
 .main-foot
-	background-color: #2e343f
+	background-color: $dark-bgc-color
 	padding: 1rem 0 2rem 0
-	color: #ddd
+	color: $dark-bgc-font-color
 	a
-		color: #ddd
+		color: $dark-bgc-font-color
 		&:hover
 			text-decoration: underline
 			color: #fff
