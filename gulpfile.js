@@ -20,8 +20,8 @@ gulp.task('browser-sync', function() {
 		// port: '3000',
 
 		// server: {baseDir: 'app'},
-		proxy: 'roscosmos', //openserver local server
-		// proxy: 'localhost:8080/sibgu_front/app', //xampp local server
+		//proxy: 'roscosmos', //openserver local server
+		proxy: 'localhost:8080/roscosmos_front/app', //xampp local server
 		
 	});
 });
@@ -30,7 +30,7 @@ gulp.task('browser-sync', function() {
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
-	.pipe(rename({suffix: '.concat', prefix : ''}))
+	.pipe(rename({suffix: '', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions']))
 	// .pipe(cleanCSS()) // Опционально, закомментировать при отладке
 	.pipe(gulp.dest('app/css'))

@@ -8,103 +8,99 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet" />
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css" />
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css" />
-	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/main.concat.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/roscosmos.css" />
 
 	<!-- scripts -->
 	<script src="libs/jquery/dist/jquery.min.js"></script>
 	<script src="libs/bootstrap/js/bootstrap.js"></script>
 </head>
-<body class="home video-bgc">
+<body class="home-page">
 
-	<!-- <div class="video-foreground">
-		<iframe src="https://www.youtube.com/embed/v=hx2ruGirDNc?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" allowfullscreen></iframe>
-    </div> -->
+	<div id="wrapwrap">
 
-	<main class="home-page">
+		<!-- Начало главной страницы -->
+		<div class="home-page">
+			<header>
+				<nav id="navbar-home" class="navbar navbar-main">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<!-- <span class="sr-only">Toggle navigation</span> -->
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<div class="logo">
+								<a href="https://roscosmos.sibsau.ru/">
+									<img class="img-responsive" src="img/logo_roscosmos_n.png" alt="">
+								</a>
+							</div>
+						</div>
 
-		<nav id="navbar-home" class="navbar navbar-main">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-						<!-- <span class="sr-only">Toggle navigation</span> -->
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<div class="logo">
-						<a href="#">
-							<img class="img-responsive" src="img/logo_roscosmos_n.png" alt="">
-						</a>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="#">Программа</a></li>
+								<li><a href="#">Участники</a></li>
+								<li><a href="#">Новости</a></li>
+								<li><a href="#">Галлерея</a></li>
+								<li><a href="#">Партнеры</a></li>
+								<li><a href="#">Пресс-центр</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+				<!-- <div class="main-head"></div> -->
+
+			</header>
+
+
+			<main>
+				<div id="wrap">
+					<div class="home-main-content">
+						<div class="container">
+							<div class="col-sm-8">
+								<h1>Конференция Дни Роскосмоса 2018 в городе Красноярск</h1>
+								<div class="home-conf-info">
+									Небольшое описание конференции
+								</div>
+								<div class="btn-wrap">
+									<a class="btn btn-success btn-lg" href="/conferences_request">Зарегистрироваться</a>
+									<a class="btn btn-primary btn-lg" href="/conferences_edit">Личный кабинет</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
+			</main>
 
 
-					</ul>
-
-					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="#">Программа</a></li>
-						<li><a href="#">Участники</a></li>
-						<li><a href="#">Новости</a></li>
-						<li><a href="#">Галлерея</a></li>
-						<li><a href="#">Партнеры</a></li>
-						<li><a href="#">Пресс-центр</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
-				</div>
-
-
-
-<!-- <li class="dropdown account-item">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<span class="fa font-icons-icon fa-user"></span>
-						<b>
-							<span>Перебатов Тест</span>
-							<span class="caret"></span>
-						</b>
-					</a>
-					<ul class="dropdown-menu js_usermenu" role="menu">
-						<li id="o_logout">
-							<a href="/web/session/logout?redirect=/" role="menuitem">Выход </a>
-						</li>
-					</ul>
-				</li> -->
-			</div>
-		</nav>
-
-
-		<div class="home-main-content">
-			<div class="container">
-				<div class="col-sm-8">
-					<h1>Крутое мероприятие с крутым названием</h1>
-					<ul class="home-list">
-						<li><i class="fa fa-check"></i> Эксурсия на Луну</li>
-						<li><i class="fa fa-check"></i> Бесплатный аттракцион "Центрифуга"</li>
-						<li><i class="fa fa-check"></i> И ещё что-то крутое</li>
-					</ul>
-					<div class="btn-wrap">
-						<button>Кнопка регистрации</button>
+			<footer>
+				<div class="home-footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 col-sm-6">
+								<div class="foot-home-conf">Конференция Дни Роскосмоса, 2018</div>
+								<div class="foot-home-link"><a href="https://www.sibsau.ru/" target="_blank">СибГУ им. М.Ф.Решетнева</a></div>
+								<div class="foot-home-link"><a href="https://www.roscosmos.ru/" target="_blank">Роскосмос</a></div>
+							</div>
+							<div class="col-md-4 col-sm-6">
+								<ul class="home-soc-links clearfix">
+									<li><a href="https://vk.com/sibgu_ru" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+									<li><a href="https://www.instagram.com/sibgu.ru/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+									<li><a href="https://www.facebook.com/%D0%A1%D0%B8%D0%B1%D0%93%D0%A3-%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8-%D0%9C%D0%A4-%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BD%D0%B5%D0%B2%D0%B0-Reshetnev-University-247376128622717/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
+			</footer>
+
 		</div>
-		
+		<!-- Конец главной страницы -->
 
-	<footer class="home-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-8">Тут будут соц. сети</div>
-				<div class="col-sm-4">А тут будет что-нибудь ещё</div>
-			</div>
-		</div>
-	</footer>
-
-	</main>
-	
-
-
+	</div>
 </body>
 </html>

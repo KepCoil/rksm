@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.css" />
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="libs/simple-lightbox/simplelightbox.min.css" />
-	<link rel="stylesheet" href="css/main.concat.css" />
+	<link rel="stylesheet" href="css/roscosmos.css" />
 
 	
 </head>
