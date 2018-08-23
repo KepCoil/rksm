@@ -31,7 +31,6 @@ a
 #wrap
 	margin-bottom: 5rem
 
-
 #div_nav_panel
 	padding: 0
 	ul#nav_panel
@@ -86,3 +85,45 @@ a
 		color: $accent-color
 		background-color: none
 		border-bottom: 1px solid $accent-color
+
+.sidebar-menu
+	&__list
+		list-style-type: none
+	&__item
+		border-bottom: 1px solid $grey-line
+		&:last-child
+			border-bottom: none
+		&--active
+			.sidebar-menu__link
+				border-left-color: $blue
+				font-weight: bold
+				background-color: $grey-bgc
+				&:hover
+					color: $default-color
+	&__link
+		border-left: 2px solid transparent
+		padding: 10px 12px
+		display: block
+		color: $default-color
+		&:hover
+			text-decoration: none
+			color: $blue
+
+
+.main-footer
+	background-color: $dark-bgc-color
+	padding: 1rem 0 2rem 0
+	color: $dark-bgc-font-color
+	a
+		color: $dark-bgc-font-color
+		&:hover
+			text-decoration: underline
+			color: #fff
+
+
+.footer-content
+	&__list
+		padding-left: 0
+		list-style-type: none
+		li
+			margin-bottom: 2px

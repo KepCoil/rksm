@@ -17,10 +17,15 @@
 	border-radius: 0
 	height: auto
 	line-height: auto
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5)
 	.navbar-nav > li > a
 		text-shadow: none
 		color: $dark-bgc-font-color
 	.navbar-nav > li > a:hover, .navbar-nav > li > a:focus
+		color: #fff
+	.navbar-nav > .open > a, .navbar-nav > .active > a
+		background-image: none
+		background-color: lighten($dark-bgc-color, 15%)
 		color: #fff
 
 
@@ -149,19 +154,34 @@
 		.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td
 			padding: 10px 0
 
-
-.main-footer
-	background-color: $dark-bgc-color
-	padding: 1rem 0 2rem 0
-	color: $dark-bgc-font-color
-	a
-		color: $dark-bgc-font-color
+.person-page
+	&__row
+		display: flex
+		flex-wrap: wrap
+	&__col
+		display: flex
+	&__item
+		background-color: $grey-bgc
+		margin-bottom: 2rem
+		transition: box-shadow .1s ease-out
 		&:hover
-			text-decoration: underline
-			color: #fff
+			box-shadow: 0 0 10px rgba(0,0,0,0.5)
+	&__photo-wrap
+		position: relative
+		padding: 0 0 100%
+		overflow: hidden
+	&__photo
+		display: block
+		position: absolute
+		left: 0
+		width: 100%
+		top: 0
+		object-fit: cover
+	&__info
+		padding: 1.5rem 1rem
+		&-name
+			font-weight: 700
+			margin-bottom: 1rem
 
 
-.footer-content
-	&__list
-		padding-left: 0
-		list-style-type: none
+

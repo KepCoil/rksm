@@ -18,7 +18,7 @@
 			<ul class="nav navbar-nav">
 				<li><a href="#">Новости</a></li>
 				<li><a href="#">Участники</a></li>
-				<li><a href="#">Программа</a></li>
+				<li class="active"><a href="#">Программа</a></li>
 				<li><a href="#">Трансферы</a></li>
 				<li><a href="#">Галлерея</a></li>
 				<li><a href="#">Партнеры</a></li>

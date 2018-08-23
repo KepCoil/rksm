@@ -33,7 +33,7 @@
 							</button>
 							<div class="logo">
 								<a href="https://roscosmos.sibsau.ru/">
-									<img class="img-responsive" src="img/logo_roscosmos_n.png" alt="">
+									<img class="img-responsive" src="img/logo_roscosmos_n.png" alt="Логотип" />
 								</a>
 							</div>
 						</div>
